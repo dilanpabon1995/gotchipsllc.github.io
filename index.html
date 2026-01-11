@@ -44,15 +44,27 @@
             margin-bottom: 15px;
         }
 
-        .fade-in {
-            opacity: 0 !important;
-            animation: fadeIn 2s ease forwards;
-            animation-delay: 1s;
+        /* Start fully invisible */
+        .fade-in-1,
+        .fade-in-2 {
+            opacity: 0;
+        }
+
+        /* First line fade */
+        .fade-in-1 {
+            animation: fadeIn 2s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        /* Second line fade */
+        .fade-in-2 {
+            animation: fadeIn 2s ease-out forwards;
+            animation-delay: 1.5s;
         }
 
         @keyframes fadeIn {
             0% { opacity: 0; }
-            100% { opacity: 1;}
+            100% { opacity: 1; }
         }
     </style>
 </head>
@@ -62,8 +74,8 @@
 <div class="coming-soon">
     <img src="assets/images/Transparent Logo May 12,2025.png" alt="Got Chips LLC Logo">
     <!-- <h1>Got Chips LLC</h1> -->
-    <p class="line1 fade-in" style="animation-delay: 0.4s;">Our full website is under construction.</p>
-    <p class="line2 fade-in" style="animation-delay: 1.2s;">Coming soon.</p>
+    <p class="line1 fade-in-1">Our full website is under construction.</p>
+    <p class="line2 fade-in-2">Coming soon.</p>
 </div>
 
 </body>
