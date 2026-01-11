@@ -7,10 +7,10 @@
    Color Palette
 --------------------------------*/
 :root {
-    --primary: #2D8CFF;
-    --dark: #1F1F1F;
-    --text: #333333;
-    --bg: #F5F5F5;
+    --primary: #F5C400;   /* Yellow accent */
+    --dark: #111111;      /* Charcoal black */
+    --text: #2A2A2A;      /* Soft black */
+    --bg: #F2F2F2;        /* Light gray */
     --white: #FFFFFF;
 }
 
@@ -81,7 +81,8 @@ h1 {
 }
 
 h2 {
-    font-size: 1.6rem;
+    border-left: 6px solid var(--primary);
+    padding-left: 12px;
 }
 
 h3 {
