@@ -279,3 +279,18 @@ footer {
     background: #ffd84d;
     transform: translateY(-2px);
 }
+
+/* File Input Styling */
+.contact-form input[type="file"] {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+}
+
+.contact-form input[type="file"]:focus {
+    outline: none;
+    border-color: var(--primary);
+}
