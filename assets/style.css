@@ -35,8 +35,15 @@ main {
    Header + Navigation
 --------------------------------*/
 header {
-    background: var(--dark);
-    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Optional: add a subtle border to separate header from content */
+header {
+    background: #111111; /* ensure solid background */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .logo {
