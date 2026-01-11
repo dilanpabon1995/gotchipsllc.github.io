@@ -1,26 +1,28 @@
+/* ------------------------------
+   Google Fonts
+--------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
+/* ------------------------------
+   Color Palette
+--------------------------------*/
+:root {
+    --primary: #2D8CFF;
+    --dark: #1F1F1F;
+    --text: #333333;
+    --bg: #F5F5F5;
+    --white: #FFFFFF;
+}
+
+/* ------------------------------
+   Global Styles
+--------------------------------*/
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f7f7f7;
-    color: #333;
-
-;
-}
-
-header {
-    background: #222;
-    padding: 15px 20px;
-}
-
-nav a {
-    color: #fff;
-    margin-right: 20px;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-nav a:hover {
-    text-decoration: underline;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
 }
 
 main {
@@ -29,10 +31,117 @@ main {
     padding: 0 20px;
 }
 
+/* ------------------------------
+   Header + Navigation
+--------------------------------*/
+header {
+    background: var(--dark);
+    padding: 15px 20px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: 0.2s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.25s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ------------------------------
+   Typography
+--------------------------------*/
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    margin-top: 40px;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+/* ------------------------------
+   Hero Section (Homepage)
+--------------------------------*/
+.hero {
+    background: var(--white);
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.hero h1 {
+    margin-top: 0;
+    font-size: 2.6rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 15px auto 30px;
+}
+
+.hero .btn {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.25s ease;
+}
+
+.hero .btn:hover {
+    background: #1b6ed6;
+}
+
+/* ------------------------------
+   Lists
+--------------------------------*/
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* ------------------------------
+   Footer
+--------------------------------*/
 footer {
     text-align: center;
     padding: 20px;
-    background: #222;
-    color: #fff;
-    margin-top: 40px;
+    background: var(--dark);
+    color: var(--white);
+    margin-top: 60px;
 }
