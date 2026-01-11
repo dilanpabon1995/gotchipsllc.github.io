@@ -72,6 +72,10 @@ nav a::after {
     transition: width 0.25s ease;
 }
 
+nav a:hover {
+    color: var(--primary);
+}
+
 nav a:hover::after {
     width: 100%;
 }
