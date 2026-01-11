@@ -87,6 +87,23 @@ nav a:hover::after {
     width: 100%;
 }
 
+.quote-btn {
+    background: var(--primary);
+    color: black;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-left: auto;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.quote-btn:hover {
+    background: black;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
 /* ------------------------------
    Typography
 --------------------------------*/
