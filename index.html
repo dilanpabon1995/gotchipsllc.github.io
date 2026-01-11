@@ -9,6 +9,13 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
     <style>
+        /* Start fully invisible */
+        .fade-in-1,
+        .fade-in-2 {
+            opacity: 0;
+            will-change: opacity;
+        }
+        
         body {
             display: flex;
             justify-content: center;
@@ -42,13 +49,6 @@
 
         .line1 {
             margin-bottom: 15px;
-        }
-
-        /* Start fully invisible */
-        .fade-in-1,
-        .fade-in-2 {
-            opacity: 0;
-            will-change: opacity;
         }
 
         /* First line fade */
