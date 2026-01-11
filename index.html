@@ -43,6 +43,18 @@
         .line1 {
             margin-bottom: 15px;
         }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.2s ease forwards;
+            animation-delay: 0.8s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
@@ -51,8 +63,8 @@
 <div class="coming-soon">
     <img src="assets/images/Transparent Logo May 12,2025.png" alt="Got Chips LLC Logo">
     <!-- <h1>Got Chips LLC</h1> -->
-    <p>Our full website is under construction.</p>
-    <p>Coming soon.</p>
+    <p class="line1 fade-in" style="animation-delay: 0.4s;">Our full website is under construction.</p>
+    <p class="line2 fade-in" style="animation-delay: 1.2s;">Coming soon.</p>
 </div>
 
 </body>
