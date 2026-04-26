@@ -275,7 +275,7 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: rgba(245, 196, 0, 0.05);
+    background: #1a1a1a;
     border: 2px dashed var(--primary);
 }
 
@@ -306,13 +306,11 @@ footer {
 }
 
 .carousel-nav {
-    position: absolute;
-    top: 50%;
-    width: 100%;
     display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    pointer-events: none;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
     z-index: 100;
 }
 
