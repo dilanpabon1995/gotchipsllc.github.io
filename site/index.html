@@ -48,22 +48,20 @@
     <!-- PROJECTS SECTION -->
     <section id="projects">
         <h2>Latest Projects</h2>
-        <div class="card-grid">
-            <div class="card">
-                <span class="post-date">May 2025</span>
-                <h3>Fanuc Robodrill Setup</h3>
-                <p>The journey of restoring and tooling up a 2007 Robodrill Mate for high-speed precision work.</p>
-                <a href="#" style="color: var(--primary); text-decoration: none;">Read More →</a>
-            </div>
-
-            <div class="card">
-                <span class="post-date">April 2025</span>
-                <h3>Modular Fixture Plate</h3>
-                <p>Designing a versatile fixture system to handle one-off prototypes and small production runs.</p>
-                <a href="#" style="color: var(--primary); text-decoration: none;">Read More →</a>
-            </div>
+        <div id="project-grid" class="card-grid">
+            <!-- Projects are injected here by the script below -->
         </div>
     </section>
+
+    <!-- Template for Project Cards -->
+    <template id="project-template">
+        <div class="card">
+            <span class="post-date"></span>
+            <h3></h3>
+            <p></p>
+            <a href="#" class="project-link" style="color: var(--primary); text-decoration: none;">Read More →</a>
+        </div>
+    </template>
 
     <!-- EQUIPMENT SECTION -->
     <section id="equipment">
@@ -107,6 +105,39 @@
     </section>
 
 </main>
+
+<script>
+    /**
+     * PROJECT REGISTRY
+     * To add a new project, just add a new object to the top of this list.
+     */
+    const projects = [
+        {
+            date: "May 2025",
+            title: "Fanuc Robodrill Setup",
+            description: "The journey of restoring and tooling up a 2007 Robodrill Mate for high-speed precision work.",
+            url: "#"
+        },
+        {
+            date: "April 2025",
+            title: "Modular Fixture Plate",
+            description: "Designing a versatile fixture system to handle one-off prototypes and small production runs.",
+            url: "#"
+        }
+    ];
+
+    const grid = document.getElementById('project-grid');
+    const template = document.getElementById('project-template');
+
+    projects.forEach(project => {
+        const clone = template.content.cloneNode(true);
+        clone.querySelector('.post-date').textContent = project.date;
+        clone.querySelector('h3').textContent = project.title;
+        clone.querySelector('p').textContent = project.description;
+        clone.querySelector('.project-link').href = project.url;
+        grid.appendChild(clone);
+    });
+</script>
 
 <footer>
     <p>© 2026 Got Chips LLC — Precision Machining & Engineering</p>
