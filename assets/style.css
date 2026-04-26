@@ -218,6 +218,16 @@ footer {
     padding: 20px;
     border-radius: 6px;
     color: var(--white);
+    scroll-snap-align: center;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease;
+    min-width: 320px;
+    flex: 0 0 auto;
+}
+
+.card.is-active {
+    transform: scale(1.08);
+    border-color: var(--primary);
+    z-index: 10;
 }
 
 /* Project Thumbnail - Static fixed height */
@@ -253,6 +263,22 @@ footer {
     margin-bottom: 15px;
 }
 
+/* See More Card Specifics */
+.see-more-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(245, 196, 0, 0.05);
+    border: 2px dashed var(--primary);
+}
+
+.see-more-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
 /* Post Date Meta */
 .post-date {
     font-size: 0.8rem;
@@ -265,6 +291,19 @@ footer {
 .card ul {
     margin: 0;
     padding-left: 20px;
+}
+
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 40px;
+    padding: 40px 20px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar Chrome/Safari */
 }
 
 /* Social Media Links */

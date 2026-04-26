@@ -48,7 +48,7 @@
     <!-- PROJECTS SECTION -->
     <section id="projects">
         <h2>Latest Projects</h2>
-        <div id="project-grid" class="card-grid">
+        <div id="project-carousel" class="carousel-container">
             <!-- Projects are injected here by the script below -->
         </div>
     </section>
@@ -143,18 +143,48 @@
         }
     ];
 
-    const grid = document.getElementById('project-grid');
+    const carousel = document.getElementById('project-carousel');
     const template = document.getElementById('project-template');
 
-    projects.forEach(project => {
+    // 1. Injected the 3 latest projects
+    projects.slice(0, 3).forEach(project => {
         const clone = template.content.cloneNode(true);
         clone.querySelector('.post-date').textContent = project.date;
         clone.querySelector('h3').textContent = project.title;
         clone.querySelector('p').textContent = project.description;
         clone.querySelector('.project-link').href = project.url;
         clone.querySelector('.card-thumb').src = project.image;
-        grid.appendChild(clone);
+        carousel.appendChild(clone);
     });
+
+    // 2. Add the "See More" Card
+    const seeMoreCard = document.createElement('div');
+    seeMoreCard.className = 'card see-more-card';
+    seeMoreCard.innerHTML = `
+        <h3>Want to see more?</h3>
+        <p>Explore the full archive of shop builds and machining experiments.</p>
+        <a href="services.html" class="social-link" style="margin-top: 10px;">View All Projects</a>
+    `;
+    carousel.appendChild(seeMoreCard);
+
+    // 3. Highlight centered card using Intersection Observer
+    const observerOptions = {
+        root: carousel,
+        threshold: 0.8
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-active');
+            } else {
+                entry.target.classList.remove('is-active');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all cards
+    document.querySelectorAll('.card').forEach(card => observer.observe(card));
 </script>
 
 <footer>
