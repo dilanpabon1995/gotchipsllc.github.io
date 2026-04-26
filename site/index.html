@@ -48,8 +48,23 @@
     <!-- PROJECTS SECTION -->
     <section id="projects">
         <h2>Latest Projects</h2>
-        <div id="project-carousel" class="carousel-container">
-            <!-- Projects are injected here by the script below -->
+        <div class="carousel-wrapper">
+            <div class="carousel-nav">
+                <button class="nav-btn" id="prevBtn" title="Previous">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m15 18-6-6 6-6"/>
+                    </svg>
+                </button>
+                <button class="nav-btn" id="nextBtn" title="Next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m9 18 6-6-6-6"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div id="project-carousel" class="carousel-container">
+                <!-- Projects are injected here by the script below -->
+            </div>
         </div>
     </section>
 
@@ -185,6 +200,15 @@
 
     // Observe all cards
     document.querySelectorAll('.card').forEach(card => observer.observe(card));
+
+    // 4. Navigation Button Logic
+    const scrollStep = 360; // Card width (320) + gap (40)
+    document.getElementById('nextBtn').addEventListener('click', () => {
+        carousel.scrollBy({ left: scrollStep, behavior: 'smooth' });
+    });
+    document.getElementById('prevBtn').addEventListener('click', () => {
+        carousel.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+    });
 </script>
 
 <footer>
