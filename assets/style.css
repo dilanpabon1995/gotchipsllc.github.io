@@ -94,6 +94,15 @@ nav a:hover::after {
     width: 100%;
 }
 
+.nav-social {
+    display: flex;
+    align-items: center;
+}
+
+.nav-social.instagram {
+    margin-left: auto; /* Pushes social icons to the right side of the nav */
+}
+
 .quote-btn {
     background: var(--primary);
     color: black;
