@@ -56,6 +56,7 @@
     <!-- Template for Project Cards -->
     <template id="project-template">
         <div class="card">
+            <img src="" class="card-thumb" alt="Project Thumbnail">
             <span class="post-date"></span>
             <h3></h3>
             <p></p>
@@ -116,7 +117,8 @@
             date: "March 2025",
             title: "Hitachi Seiki Lathe",
             description: "The eBay purchase that should have not happened! Documenting the restoration of a classic CNC lathe.",
-            url: "#"
+            url: "#",
+            image: "C:\Users\dilan\OneDrive\GOT_CHIPS\Website\gotchipsllc.github.io\assets\images\Hitachi Seiki 4NEII-600.jpg"
         }
     ];
 
@@ -129,6 +131,7 @@
         clone.querySelector('h3').textContent = project.title;
         clone.querySelector('p').textContent = project.description;
         clone.querySelector('.project-link').href = project.url;
+        clone.querySelector('.card-thumb').src = project.image;
         grid.appendChild(clone);
     });
 </script>

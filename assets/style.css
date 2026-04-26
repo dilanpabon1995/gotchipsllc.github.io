@@ -221,6 +221,24 @@ footer {
     color: var(--white);
 }
 
+/* Project Thumbnail - Hidden by default */
+.card-thumb {
+    width: 100%;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+}
+
+.card:hover .card-thumb {
+    max-height: 180px; /* Adjust height as needed */
+    opacity: 1;
+    margin-bottom: 15px;
+}
+
 /* Yellow Accent Bar */
 .card::before {
     content: "";
