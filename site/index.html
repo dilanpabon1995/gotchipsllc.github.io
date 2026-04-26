@@ -16,10 +16,10 @@
     <nav>
         <img src="../assets/images/Transparent Logo May 12,2025.png" alt="Got Chips LLC Logo" class="logo">
         <a href="index.html">Home</a>
-        <a href="services.html">Projects</a>
-        <a href="equipment.html">Equipment</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="#projects">Projects</a>
+        <a href="#equipment">Equipment</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
     </nav>
 </header>
 
@@ -32,30 +32,76 @@
         <a class="btn" href="about.html">Explore the Shop</a>
     </div>
 
-    <h2>Latest Projects</h2>
-    <div class="card-grid">
-        <div class="card">
-            <span class="post-date">May 2025</span>
-            <h3>Fanuc Robodrill Setup</h3>
-            <p>The journey of restoring and tooling up a 2007 Robodrill Mate for high-speed precision work.</p>
-            <a href="services.html" style="color: var(--primary); text-decoration: none;">View Project →</a>
-        </div>
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <h2>Latest Projects</h2>
+        <div class="card-grid">
+            <div class="card">
+                <span class="post-date">May 2025</span>
+                <h3>Fanuc Robodrill Setup</h3>
+                <p>The journey of restoring and tooling up a 2007 Robodrill Mate for high-speed precision work.</p>
+                <a href="#" style="color: var(--primary); text-decoration: none;">Read More →</a>
+            </div>
 
-        <div class="card">
-            <span class="post-date">April 2025</span>
-            <h3>Modular Fixture Plate</h3>
-            <p>Designing a versatile fixture system to handle one-off prototypes and small production runs.</p>
-            <a href="services.html" style="color: var(--primary); text-decoration: none;">View Project →</a>
+            <div class="card">
+                <span class="post-date">April 2025</span>
+                <h3>Modular Fixture Plate</h3>
+                <p>Designing a versatile fixture system to handle one-off prototypes and small production runs.</p>
+                <a href="#" style="color: var(--primary); text-decoration: none;">Read More →</a>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div style="margin-top: 50px; text-align: center; background: var(--white); padding: 40px; border-radius: 6px;">
-        <h2>Interested in a collaboration?</h2>
-        <p>I still take on occasional prototype work and engineering consulting projects.</p>
-        <a href="contact.html" style="color: var(--dark); font-weight: bold;">Get in touch →</a>
-    </div>
+    <!-- EQUIPMENT SECTION -->
+    <section id="equipment">
+        <h2>The Shop Equipment</h2>
+        <p>Reliable machines that power the builds.</p>
+        <ul>
+            <li><strong>Fanuc Robodrill Mate:</strong> High-speed 3-axis CNC machining.</li>
+            <li><strong>Manual Support:</strong> Precision workholding, metrology, and tooling.</li>
+            <li><strong>CAD/CAM:</strong> Full integration with Fusion 360 for rapid iteration.</li>
+        </ul>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h2>About the Shop</h2>
+        <p>Got Chips LLC is an engineering-focused shop built around curiosity and precision. I believe in clear communication, practical engineering, and making real parts that work in the real world.</p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>Interested in a collaboration? I still take on occasional prototype work and consulting projects.</p>
+        
+        <form class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <div class="form-field">
+                <label for="files">Upload Files (STEP, PDF, etc.)</label>
+                <input type="file" id="files" name="files" multiple>
+            </div>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit" class="form-btn">Send Message</button>
+        </form>
+    </section>
 
 </main>
+
+<script>
+/* Simple contact form alert */
+document.querySelector(".contact-form")?.addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Thanks for reaching out! This is a single-page demo.");
+});
+</script>
 
 <footer>
     <p>© 2026 Got Chips LLC — Precision Machining & Engineering</p>

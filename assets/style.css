@@ -17,6 +17,11 @@
 /* ------------------------------
    Global Styles
 --------------------------------*/
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Offset for the sticky header */
+}
+
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
@@ -30,6 +35,12 @@ main {
     margin: 40px auto;
     padding: 0 20px;
 }
+
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+section:last-of-type { border-bottom: none; }
 
 /* ------------------------------
    Header + Navigation
