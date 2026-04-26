@@ -247,66 +247,29 @@ footer {
     padding-left: 20px;
 }
 
-/* Contact Form Layout */
-.contact-form {
+/* Social Media Links */
+.social-links {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 15px;
-    max-width: 500px;
     margin-top: 20px;
 }
 
-/* Labels */
-.contact-form label {
-    font-weight: bold;
-    color: var(--primary);
-}
-
-/* Inputs + Textarea */
-.contact-form input,
-.contact-form textarea {
-    background: #1a1a1a;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 10px;
-    border-radius: 4px;
-    color: white;
-    font-size: 1rem;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--primary);
-}
-
-/* Submit Button */
-.form-btn {
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     background: var(--primary);
-    color: black;
-    padding: 10px 16px;
-    border: none;
+    color: var(--dark);
+    padding: 12px 24px;
     border-radius: 4px;
+    text-decoration: none;
     font-weight: bold;
-    cursor: pointer;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-.form-btn:hover {
-    background: #ffd84d;
-    transform: translateY(-2px);
-}
-
-/* File Input Styling */
-.contact-form input[type="file"] {
-    background: #1a1a1a;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 10px;
-    border-radius: 4px;
-    color: white;
-    font-size: 1rem;
-}
-
-.contact-form input[type="file"]:focus {
-    outline: none;
-    border-color: var(--primary);
+.social-link:hover {
+    background: var(--dark);
+    color: var(--primary);
+    transform: translateY(-3px);
 }
